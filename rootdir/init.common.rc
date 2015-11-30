@@ -42,6 +42,9 @@ on init
     # Support legacy storage paths
     symlink /sdcard /mnt/sdcard
     symlink /sdcard /storage/sdcard0
+	
+	# libshim for camera sensor service
+	export LD_SHIM_LIBS "/system/bin/mm-qcamera-daemon|libshim_camera.so" 
 
 on post-fs-data
     # Create directory used by bluetooth subsystem
