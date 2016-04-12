@@ -39,13 +39,11 @@ on init
     chown system system /sys/devices/mdss_dsi_panel/panel_id
     chmod 0440 /sys/devices/mdss_dsi_panel/panel_id
 
-    # Support legacy storage paths
-    symlink /sdcard /mnt/sdcard
     symlink /sdcard /storage/sdcard1
-	
-	
+
 	# libshim for camera sensor service
     export LD_SHIM_LIBS "/system/bin/mm-qcamera-daemon|libshim_camera.so:/system/vendor/lib64/libdpmframework.so|libshim_parcel.so:/system/vendor/lib64/libcne.so|libshim_parcel.so:/system/vendor/lib/libmmqjpeg_codec.so|libboringssl-compat.so" 
+    symlink /sdcard /storage/sdcard0
 
 on post-fs-data
     # Create directory used by bluetooth subsystem
