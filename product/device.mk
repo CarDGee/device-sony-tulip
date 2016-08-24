@@ -15,4 +15,35 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml \
     frameworks/native/data/etc/android.hardware.sensor.gyroscope.xml:system/etc/permissions/android.hardware.sensor.gyroscope.xml
 
+# OSS
+PRODUCT_PACKAGES += \
+    timekeep \
+    TimeKeep \
+    thermanager \
+    macaddrsetup
+
+# QCOM OSS
+PRODUCT_PACKAGES += \
+    librmnetctl \
+    libloc_api_v02 \
+    libloc_ds_api
+
+PRODUCT_PACKAGES += \
+    libion \
+    libxml2
+
+PRODUCT_PACKAGES += \
+    libemoji
+
+# Property to enable user to access Google WFD settings.
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.debug.wfd.enable=1
+
+# Property to choose between virtual/external wfd display
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.wfd.virtual=0
+
+# Ringer
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.telephony.call_ring.multiple=false
 

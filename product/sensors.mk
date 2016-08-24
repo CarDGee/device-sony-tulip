@@ -33,4 +33,18 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.qti.sensors.wu=false
 
 PRODUCT_COPY_FILES := \
-    device/sony/tulip/sensor/sensord_cfg_axis.txt:system/etc/sensor/sensord_cfg_axis.txt
+    device/sony/tulip/sensor/sensord_cfg_axis.txt:system/etc/sensor/sensord_cfg_axis.txt \
+    frameworks/native/data/etc/android.hardware.sensor.accelerometer.xml:system/etc/permissions/android.hardware.sensor.accelerometer.xml \
+    frameworks/native/data/etc/android.hardware.sensor.compass.xml:system/etc/permissions/android.hardware.sensor.compass.xml \
+    frameworks/native/data/etc/android.hardware.sensor.light.xml:system/etc/permissions/android.hardware.sensor.light.xml \
+    frameworks/native/data/etc/android.hardware.sensor.proximity.xml:system/etc/permissions/android.hardware.sensor.proximity.xml \
+    frameworks/native/data/etc/android.hardware.sensor.stepcounter.xml:system/etc/permissions/android.hardware.sensor.stepcounter.xml \
+    frameworks/native/data/etc/android.hardware.sensor.stepdetector.xml:system/etc/permissions/android.hardware.sensor.stepdetector.xml \
+    device/sony/tulip/sensor/sensors_settings:system/etc/sensors/sensors_settings
+
+# Sensors debug
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.debug.sensors.hal=0 \
+    debug.qualcomm.sns.daemon=0 \
+    debug.qualcomm.sns.hal=0 \
+    debug.qualcomm.sns.libsensor1=0

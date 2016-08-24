@@ -38,3 +38,6 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="tulip_ss-user 6.0.1 26.3.A.0.131 1.0.J.0.0 test-keys"
 
 include device/sony/common/CommonConfig.mk
+
+# Include build helpers for QCOM proprietary
+include vendor/qcom/proprietary/common/build/proprietary-build.mk

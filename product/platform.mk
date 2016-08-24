@@ -4,6 +4,14 @@ PRODUCT_PACKAGES += \
     init.tulip \
     ueventd.tulip
 	
-# Sony MACAddrSetup package
-PRODUCT_PACKAGES += \
-macaddrsetup
+# Platform specific default properties
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.data.qmi.adb_logmask=0
+
+# Enable MultiWindow
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.debug.multi_window=true
+
+# DRM service
+PRODUCT_PROPERTY_OVERRIDES += \
+    drm.service.enabled=true
