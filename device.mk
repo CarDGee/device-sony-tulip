@@ -25,5 +25,3 @@ PRODUCT_AAPT_PREF_CONFIG := xhdpi
 	
 # Device product elements
 include $(LOCAL_PATH)/product/*.mk
-	
-$(call inherit-product, device/sony/common/common.mk)
