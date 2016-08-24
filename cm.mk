@@ -14,6 +14,7 @@
 # limitations under the License.
 #
 
+SOMC_PLATFORM := kanuti
 
 # Inherit framework first
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
@@ -39,5 +40,6 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 
 include device/sony/common/CommonConfig.mk
 
-# Include build helpers for QCOM proprietary
-include vendor/qcom/proprietary/common/build/proprietary-build.mk
+# Include build helpers for QCOM proprietary/kanuti
+$(call inherit-product, vendor/sony/kanuti-tulip/tulip-vendor.mk)
+$(call inherit-product, vendor/qcom/proprietary/qcom-vendor.mk)
