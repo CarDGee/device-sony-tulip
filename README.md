@@ -1,7 +1,5 @@
-Copyright (C) Sony Mobile Communications 2015
+Xperia M4 Aqua
 =============================================
 
-This is the Android device configuration for Xperia M4 (kanuti platform).
+This is the Android device configuration for Xperia M4 (kanuti platform) for CyanogenMod 13.0.
 
-Build instructions
-http://developer.sonymobile.com/knowledge-base/open-source/open-devices/aosp-build-instructions/
