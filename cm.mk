@@ -42,4 +42,4 @@ include device/sony/common/CommonConfig.mk
 
 # Include build helpers for QCOM proprietary/kanuti
 $(call inherit-product, vendor/sony/kanuti-tulip/tulip-vendor.mk)
-$(call inherit-product, vendor/qcom/qcom-vendor.mk)
+$(call inherit-product, vendor/qcom/prebuilt/qcom-vendor.mk)
