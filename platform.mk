@@ -17,36 +17,34 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 
 SOMC_PLATFORM := kanuti
 
-SONY_ROOT := device/sony/kanuti/rootdir
-
 # Media
 PRODUCT_COPY_FILES += \
-    $(SONY_ROOT)/system/etc/aanc_tuning_mixer.txt:system/etc/aanc_tuning_mixer.txt \
-    $(SONY_ROOT)/system/etc/audio_policy.conf:system/etc/audio_policy.conf \
-    $(SONY_ROOT)/system/etc/media_codecs.xml:system/etc/media_codecs.xml \
-    $(SONY_ROOT)/system/etc/media_profiles.xml:system/etc/media_profiles.xml \
-    $(SONY_ROOT)/system/etc/audio_platform_info.xml:system/etc/audio_platform_info.xml
+    device/sony/tulip/audio/aanc_tuning_mixer.txt:system/etc/aanc_tuning_mixer.txt \
+    device/sony/tulip/audio/audio_policy.conf:system/etc/audio_policy.conf \
+    device/sony/tulip/audio/media_codecs.xml:system/etc/media_codecs.xml \
+    device/sony/tulip/audio/media_profiles.xml:system/etc/media_profiles.xml \
+    device/sony/tulip/audio/audio_platform_info.xml:system/etc/audio_platform_info.xml
 
 # Qualcom WiFi
 PRODUCT_COPY_FILES += \
-    $(SONY_ROOT)/system/etc/wifi/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf \
-    $(SONY_ROOT)/system/etc/wifi/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf
+    device/sony/tulip/wifi/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf \
+    device/sony/tulip/wifi/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf
 
 # Qualcom BT
 PRODUCT_COPY_FILES += \
-    $(SONY_ROOT)/system/etc/init.qcom.bt.sh:system/etc/init.qcom.bt.sh
+    device/sony/tulip/rootdir/etc/init.qcom.bt.sh:system/etc/init.qcom.bt.sh
 
 # Keylayout
 PRODUCT_COPY_FILES += \
-    $(SONY_ROOT)/system/usr/keylayout/ft5x06_ts.kl:system/usr/keylayout/ft5x06_ts.kl \
-    $(SONY_ROOT)/system/usr/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
-    $(SONY_ROOT)/system/usr/keylayout/synaptics_dsx.kl:system/usr/keylayout/synaptics_dsx.kl \
-    $(SONY_ROOT)/system/usr/keylayout/synaptics_rmi4_i2c.kl:system/usr/keylayout/synaptics_rmi4_i2c.kl
+    device/sony/tulip/configs/ft5x06_ts.kl:system/usr/keylayout/ft5x06_ts.kl \
+    device/sony/tulip/configs/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
+    device/sony/tulip/configs/synaptics_dsx.kl:system/usr/keylayout/synaptics_dsx.kl \
+    device/sony/tulip/configs/synaptics_rmi4_i2c.kl:system/usr/keylayout/synaptics_rmi4_i2c.kl
 
 # IDC
 PRODUCT_COPY_FILES += \
-    $(SONY_ROOT)/system/usr/idc/cyttsp4_mt.idc:system/usr/idc/cyttsp4_mt.idc \
-    $(SONY_ROOT)/system/usr/idc/cyttsp5_mt.idc:system/usr/idc/cyttsp5_mt.idc
+    device/sony/tulip/configs/cyttsp4_mt.idc:system/usr/idc/cyttsp4_mt.idc \
+    device/sony/tulip/configs/cyttsp5_mt.idc:system/usr/idc/cyttsp5_mt.idc
 
 # Device Specific Hardware
 PRODUCT_COPY_FILES += \
@@ -85,11 +83,6 @@ PRODUCT_PACKAGES += \
 # Keymaster
 PRODUCT_PACKAGES += \
     keystore.msm8916
-
-# Telephony Packages (AOSP)
-PRODUCT_PACKAGES += \
-    InCallUI \
-    Stk
 
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \

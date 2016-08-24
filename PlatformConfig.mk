@@ -51,7 +51,7 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 4399808512
 BOARD_CACHEIMAGE_PARTITION_SIZE := 209715200
 BOARD_FLASH_BLOCK_SIZE := 131072 # (BOARD_KERNEL_PAGESIZE * 64)
 
-TARGET_RECOVERY_FSTAB = device/sony/kanuti/rootdir/fstab.kanuti
+TARGET_RECOVERY_FSTAB = device/sony/tulip/rootdir/fstab.qcom
 
 # Wi-Fi definitions for Qualcomm solution
 BOARD_HAS_QCOM_WLAN := true
@@ -68,7 +68,7 @@ WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # BT definitions for Qualcomm solution
 BLUETOOTH_HCI_USE_MCT := true
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/sony/kanuti/bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/sony/tulip/bluetooth
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_QCOM := true
 
@@ -78,9 +78,9 @@ TARGET_QCOM_DISPLAY_VARIANT := caf
 NFC_NXP_CHIP_TYPE := PN547C2
 
 # Props for hotplugging
-TARGET_SYSTEM_PROP += device/sony/kanuti/system.prop
+TARGET_SYSTEM_PROP += device/sony/tulip/system.prop
 
 # SELinux
-BOARD_SEPOLICY_DIRS += device/sony/kanuti/sepolicy
+BOARD_SEPOLICY_DIRS += device/sony/tulip/sepolicy
 
 include device/sony/common/CommonConfig.mk

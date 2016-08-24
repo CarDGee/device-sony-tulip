@@ -17,11 +17,11 @@ DEVICE_PACKAGE_OVERLAYS += \
 
 # Device etc
 PRODUCT_COPY_FILES := \
-    device/sony/tulip/rootdir/system/etc/sensor/sensord_cfg_axis.txt:system/etc/sensor/sensord_cfg_axis.txt \
-    device/sony/tulip/rootdir/system/etc/thermanager.xml:system/etc/thermanager.xml \
-    device/sony/tulip/rootdir/system/etc/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \
-    device/sony/tulip/rootdir/system/etc/libnfc-nxp.conf:system/etc/libnfc-nxp.conf \
-    device/sony/tulip/rootdir/system/etc/mixer_paths.xml:system/etc/mixer_paths.xml
+    device/sony/tulip/sensor/sensord_cfg_axis.txt:system/etc/sensor/sensord_cfg_axis.txt \
+    device/sony/tulip/configs/thermanager.xml:system/etc/thermanager.xml \
+    device/sony/tulip/nfc/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \
+    device/sony/tulip/nfc/libnfc-nxp.conf:system/etc/libnfc-nxp.conf \
+    device/sony/tulip/audio/mixer_paths.xml:system/etc/mixer_paths.xml
 
 # Device Specific Permissions
 PRODUCT_COPY_FILES += \
