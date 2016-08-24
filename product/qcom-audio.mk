@@ -8,4 +8,5 @@ PRODUCT_COPY_FILES += \
     device/sony/tulip/audio/media_codecs.xml:system/etc/media_codecs.xml \
     device/sony/tulip/audio/media_profiles.xml:system/etc/media_profiles.xml \
     device/sony/tulip/audio/audio_platform_info.xml:system/etc/audio_platform_info.xml \
-	device/sony/tulip/audio/mixer_paths.xml:system/etc/mixer_paths.xml
+	device/sony/tulip/audio/mixer_paths.xml:system/etc/mixer_paths.xml \
+	device/sony/tulip/audio/mixer_paths.xml:system/etc/mixer_paths_mtp.xml
