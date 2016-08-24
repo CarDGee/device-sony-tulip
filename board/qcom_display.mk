@@ -1,0 +1,2 @@
+#Display
+TARGET_QCOM_DISPLAY_VARIANT := caf
