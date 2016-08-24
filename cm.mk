@@ -20,7 +20,7 @@ SOMC_PLATFORM := kanuti
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit from r7sf device
+# Inherit from sony device
 $(call inherit-product, device/sony/tulip/device.mk)
 
 # Inherit some common CM stuff.
@@ -37,8 +37,6 @@ PRODUCT_MANUFACTURER := Sony
 PRODUCT_BUILD_PROP_OVERRIDES += \
     BUILD_FINGERPRINT=Sony/MSM8916_for_arm64/tulip_ss:6.0.1/1.0.J.0.0/9:user/test-keys \
     PRIVATE_BUILD_DESC="tulip_ss-user 6.0.1 26.3.A.0.131 1.0.J.0.0 test-keys"
-
-include device/sony/common/CommonConfig.mk
 
 # Include build helpers for QCOM proprietary/kanuti
 $(call inherit-product, vendor/sony/kanuti-tulip/tulip-vendor.mk)
