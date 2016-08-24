@@ -1,7 +1,11 @@
 # RILD
 PRODUCT_PROPERTY_OVERRIDES += \
     rild.libpath=/vendor/lib64/libril-qc-qmi-1.so \
-    ril.subscription.types=NV,RUIM
+    ril.subscription.types=NV,RUIM \
+    ro.telephony.default_network=9,9 \
+    ro.telephony.ril.config=simactivation,sim2gsmonly \
+    persist.radio.multisim.config=dsds
+
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml
@@ -10,10 +14,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/sample/etc/old-apns-conf.xml:system/etc/old-apns-conf.xml \
     device/sample/etc/apns-full-conf.xml:system/etc/apns-conf.xml
-
-# Default to LTE/GSM/WCDMA.
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.telephony.default_network=9
 
 # System props for the data modules
 PRODUCT_PROPERTY_OVERRIDES += \
