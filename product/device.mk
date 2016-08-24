@@ -34,6 +34,11 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     libemoji
+	
+#CM PACKAGES
+PRODUCT_PACKAGES += \
+    Snap \
+	Gello
 
 # Property to enable user to access Google WFD settings.
 PRODUCT_PROPERTY_OVERRIDES += \
