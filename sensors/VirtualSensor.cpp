@@ -135,7 +135,7 @@ int VirtualSensor::injectEvents(sensors_event_t* data, int count)
 		event = data[i];
 		sensors_event_t out;
 		if (mFreeSpace && (event.type != SENSOR_TYPE_META_DATA)) {
-			if (algo->methods->convert(&event, &out))
+			if (algo->methods->convert(&event, &out, NULL))
 				continue;
 
 			out.version = sizeof(sensors_event_t);

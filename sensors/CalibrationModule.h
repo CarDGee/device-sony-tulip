@@ -80,6 +80,8 @@ struct sensor_cal_module_t;
 struct sensor_algo_args {
 	int enable;
 	int delay_ms;
+	struct sensor_t sensor;
+	int (*store_calibrate_params)(struct sensor_t *sensor, struct sensors_event_t *bias);
 };
 
 struct compass_algo_args {
@@ -93,13 +95,13 @@ struct gyro_algo_args {
 };
 
 struct sensor_algo_methods_t {
-	int (*convert)(sensors_event_t *raw, sensors_event_t *result);
+	int (*convert)(sensors_event_t *raw, sensors_event_t *result, struct sensor_algo_args *args);
 	/* Note that the config callback is called from a different thread as convert */
 	int (*config)(int cmd, struct sensor_algo_args *args);
 };
 
 struct sensor_cal_methods_t {
-	int (*init)(const struct sensor_cal_module_t* module);
+	int (*init)(const struct sensor_cal_module_t* module, struct sensor_algo_args *args);
 	void (*deinit)();
 	/* Return 0 on success */
 	int (*get_algo_list)(const struct sensor_cal_algo_t **algo);
