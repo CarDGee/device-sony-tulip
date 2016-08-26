@@ -44,8 +44,7 @@ on init
     symlink /sdcard /storage/sdcard0
 	
 	# libshim for camera sensor service
-	export LD_SHIM_LIBS "/system/bin/mm-qcamera-daemon|libshim_camera.so:/system/vendor/lib/libmmqjpeg_codec.so|libboringssl-compat.so" 
-
+    export LD_SHIM_LIBS "/system/bin/mm-qcamera-daemon|libshim_camera.so:/system/vendor/lib64/libdpmframework.so|libshim_parcel.so:/system/vendor/lib64/libcne.so|libshim_parcel.so:/system/vendor/lib/libmmqjpeg_codec.so|libboringssl-compat.so" 
 
 on post-fs-data
     # Create directory used by bluetooth subsystem
