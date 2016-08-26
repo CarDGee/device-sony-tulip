@@ -3,10 +3,7 @@ PRODUCT_PACKAGES += \
     gralloc.msm8916 \
     copybit.msm8916 \
     hwcomposer.msm8916 \
-    memtrack.msm8916 \
-    libhdmi \
-    libqdutils \
-    libqdMetaData
+    memtrack.msm8916
 
 # OMX
 PRODUCT_PACKAGES += \
