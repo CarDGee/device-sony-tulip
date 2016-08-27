@@ -8,15 +8,6 @@ PRODUCT_PACKAGES += \
     libqdutils \
     libqdMetaData
 
-# OMX
-PRODUCT_PACKAGES += \
-    libc2dcolorconvert \
-    libstagefrighthw \
-    libOmxCore \
-    libmm-omxcore \
-    libOmxVdec \
-    libOmxVdecHevc \
-    libOmxVenc
 
 
 # system prop for opengles version
@@ -27,8 +18,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Hardware composer
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.hwc.mdpcomp.enable=true
-
+    debug.composition.type=c2d \
+    debug.mdpcomp.idletime=600 \
+    persist.hwc.mdpcomp.enable=true \
+    persist.hwc.ptor.enable=true \
+	debug.enable.sglscale=1
+	
 # Hardware User Interface parameters
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.hwui.texture_cache_size=72 \
