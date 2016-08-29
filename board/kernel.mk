@@ -44,4 +44,4 @@ BOARD_FLASH_BLOCK_SIZE := 131072 # (BOARD_KERNEL_PAGESIZE * 64)
 
 TARGET_RECOVERY_FSTAB = device/sony/tulip/rootdir/fstab.qcom
 
-include device/sony/common-headers/KernelHeaders.mk
+include device/sony/tulip/KernelHeaders.mk
