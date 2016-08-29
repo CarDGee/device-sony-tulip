@@ -12,7 +12,3 @@ ifeq ($(HOST_OS),linux)
     endif
   endif
 endif
-
-#SONY CAF PROPS
-BOARD_USES_QCOM_HARDWARE := true
-SONY_BF64_KERNEL_VARIANT := true
