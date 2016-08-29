@@ -43,3 +43,5 @@ BOARD_CACHEIMAGE_PARTITION_SIZE := 209715200
 BOARD_FLASH_BLOCK_SIZE := 131072 # (BOARD_KERNEL_PAGESIZE * 64)
 
 TARGET_RECOVERY_FSTAB = device/sony/tulip/rootdir/fstab.qcom
+
+include device/sony/common-headers/KernelHeaders.mk
