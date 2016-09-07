@@ -54,3 +54,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.usb.config=mtp
+	
+
+# configure adb over wifi only on the eng build
+ifneq (,$(filter eng, $(TARGET_BUILD_VARIANT)))
+ PRODUCT_PROPERTY_OVERRIDES += \
+     service.adb.tcp.port=5555
+endif 
