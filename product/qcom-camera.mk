@@ -5,8 +5,6 @@ PRODUCT_PACKAGES += \
     libmmjpeg_interface \
     libmm-qcamera \
     libqomx_core \
-    libboringssl-compat \
-	libstlport \
 	libshim_camera
 
 	
