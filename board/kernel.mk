@@ -6,8 +6,8 @@ TARGET_NO_BOOTLOADER := true
 TARGET_NO_RECOVERY := false
 TARGET_NO_KERNEL := false
 
-TARGET_KERNEL_SOURCE := kernel/sony/msm8939
-TARGET_KERNEL_CONFIG := cm_kanuti_tulip_defconfig
+TARGET_KERNEL_SOURCE := kernel/sony/msm
+TARGET_KERNEL_CONFIG := aosp_kanuti_tulip_defconfig
 
 TARGET_BOOTLOADER_BOARD_NAME := E2303
 
