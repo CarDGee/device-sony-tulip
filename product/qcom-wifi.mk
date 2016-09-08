@@ -19,7 +19,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     wpa_supplicant \
     wpa_supplicant.conf \
-    dhcpcd.conf \
     hostapd \
     libwpa_client \
     p2p_supplicant.conf \
