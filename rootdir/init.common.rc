@@ -40,9 +40,6 @@ on init
     chmod 0440 /sys/devices/mdss_dsi_panel/panel_id
 
     symlink /sdcard /storage/sdcard1
-
-	# libshim for camera sensor service
-	export LD_SHIM_LIBS "/system/bin/mm-qcamera-daemon|libshim_camera.so" 
     symlink /sdcard /storage/sdcard0
 
 on post-fs-data

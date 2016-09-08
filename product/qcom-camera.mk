@@ -4,8 +4,7 @@ PRODUCT_PACKAGES += \
     libmmcamera_interface \
     libmmjpeg_interface \
     libmm-qcamera \
-    libqomx_core \
-	libshim_camera
+    libqomx_core
 
 	
 PRODUCT_COPY_FILES += \
