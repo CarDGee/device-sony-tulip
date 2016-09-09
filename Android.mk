@@ -1,4 +1,7 @@
-#
-# This empty Android.mk file exists to prevent the build system from
-# automatically including any other Android.mk files under this directory.
-#
+LOCAL_PATH := $(call my-dir)
+
+include $(call all-makefiles-under,$(LOCAL_PATH))
+
+$(shell mkdir -p $(TARGET_OUT)/lib/modules; \
+        ln -sf /system/lib/modules/pronto/pronto_wlan.ko \
+               $(TARGET_OUT)/lib/modules/wlan.ko)
