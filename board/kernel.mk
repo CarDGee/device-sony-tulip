@@ -1,6 +1,4 @@
 #Kernel
-BUILD_KERNEL := true
-
 TARGET_NO_RADIOIMAGE := true
 TARGET_NO_BOOTLOADER := true
 TARGET_NO_RECOVERY := false
