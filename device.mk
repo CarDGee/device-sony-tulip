@@ -17,11 +17,11 @@
 # Board device path
 DEVICE_PATH := device/sony/tulip
 
-DEVICE_PACKAGE_OVERLAYS += \
-    device/sony/tulip/overlay
+# Overlay
+DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xhdpi
-	
+
 # Device product elements
 include $(LOCAL_PATH)/product/*.mk

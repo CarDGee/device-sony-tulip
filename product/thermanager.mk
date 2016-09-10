@@ -4,4 +4,4 @@ PRODUCT_COPY_FILES += \
 
 # Thermal management packages
 PRODUCT_PACKAGES += \
-thermanager
+    thermanager

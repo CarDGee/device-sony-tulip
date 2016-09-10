@@ -8,8 +8,6 @@ PRODUCT_PACKAGES += \
     libqdutils \
     libqdMetaData
 
-
-
 # system prop for opengles version
 # 196609 is decimal for 0x30001 to
 # report major/minor versions as 3/1
@@ -22,8 +20,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.mdpcomp.idletime=600 \
     persist.hwc.mdpcomp.enable=true \
     persist.hwc.ptor.enable=true \
-	debug.enable.sglscale=1
-	
+    debug.enable.sglscale=1
+
 # Hardware User Interface parameters
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.hwui.texture_cache_size=72 \

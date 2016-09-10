@@ -1,7 +1,7 @@
 # Device Specific Hardware
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.nfc.hce.xml:system/etc/permissions/android.hardware.nfc.hce.xml
-	
+
 # Device etc
 PRODUCT_COPY_FILES := \
     device/sony/tulip/sensor/sensord_cfg_axis.txt:system/etc/sensor/sensord_cfg_axis.txt \
@@ -34,11 +34,11 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     libemoji
-	
+
 #CM PACKAGES
 PRODUCT_PACKAGES += \
     Snap \
-	Gello
+    Gello
 
 # Property to enable user to access Google WFD settings.
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -54,7 +54,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.usb.config=mtp
-	
+
 
 # configure adb over wifi only on the eng build
 ifneq (,$(filter eng, $(TARGET_BUILD_VARIANT)))

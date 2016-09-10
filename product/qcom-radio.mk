@@ -6,14 +6,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.ril.config=simactivation,sim2gsmonly \
     persist.radio.multisim.config=dsds
 
-
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml
-
-# APN list
-PRODUCT_COPY_FILES += \
-    device/sample/etc/old-apns-conf.xml:system/etc/old-apns-conf.xml \
-    device/sample/etc/apns-full-conf.xml:system/etc/apns-conf.xml
 
 # System props for the data modules
 PRODUCT_PROPERTY_OVERRIDES += \

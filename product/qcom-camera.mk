@@ -6,7 +6,7 @@ PRODUCT_PACKAGES += \
     libmm-qcamera \
     libqomx_core
 
-	
+
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.flash-autofocus.xml:system/etc/permissions/android.hardware.camera.flash-autofocus.xml \
     frameworks/native/data/etc/android.hardware.camera.front.xml:system/etc/permissions/android.hardware.camera.front.xml \
@@ -17,5 +17,5 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.camera.HAL3.enabled=1 \
     persist.camera.gyro.disable=1 \
-    persist.camera.feature.cac=0 \ 
+    persist.camera.feature.cac=0 \
     persist.camera.ois.disable=0
