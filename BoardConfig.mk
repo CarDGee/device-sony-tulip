@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2015 The CyanogenMod Project
+# Copyright (C) 2016 The CyanogenMod Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,10 +12,9 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-#
 
-# Board device elements
-include $(DEVICE_PATH)/board/*.mk
+include device/sony/tulip/board/*.mk
 
-# Assert
-TARGET_OTA_ASSERT_DEVICE := E2303,E2353,E2312,tulip
+TARGET_BOOTLOADER_BOARD_NAME := E2303
+
+BOARD_KERNEL_CMDLINE += androidboot.hardware=tulip

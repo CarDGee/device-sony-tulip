@@ -3,9 +3,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.qualcomm.bt.hci_transport=smd
 
 PRODUCT_COPY_FILES += \
-    device/sony/tulip/rootdir/etc/init.qcom.bt.sh:system/etc/init.qcom.bt.sh
-
-PRODUCT_COPY_FILES += \
+    device/sony/tulip/rootdir/etc/init.qcom.bt.sh:system/etc/init.qcom.bt.sh \
     frameworks/native/data/etc/android.hardware.bluetooth_le.xml:system/etc/permissions/android.hardware.bluetooth_le.xml
 
 # BT address

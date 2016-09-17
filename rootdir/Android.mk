@@ -1,10 +1,10 @@
 LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
-LOCAL_MODULE := fstab.qcom
-LOCAL_SRC_FILES := fstab.qcom
+LOCAL_MODULE := fstab.kanuti
+LOCAL_SRC_FILES := fstab.kanuti
 LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_STEM := fstab.qcom
+LOCAL_MODULE_STEM := fstab.kanuti
 LOCAL_MODULE_CLASS := ETC
 LOCAL_MODULE_PATH := $(TARGET_ROOT_OUT)
 include $(BUILD_PREBUILT)
@@ -49,5 +49,5 @@ LOCAL_MODULE_CLASS := ETC
 LOCAL_MODULE_PATH := $(TARGET_ROOT_OUT)
 include $(BUILD_PREBUILT)
 
-$(shell mkdir -p $(PRODUCT_OUT)/root && pushd $(PRODUCT_OUT)/root > /dev/null && ln -s fstab.qcom fstab.$(TARGET_DEVICE) && popd > /dev/null)
+$(shell mkdir -p $(PRODUCT_OUT)/root && pushd $(PRODUCT_OUT)/root > /dev/null && ln -s fstab.kanuti fstab.$(TARGET_DEVICE) && popd > /dev/null)
 

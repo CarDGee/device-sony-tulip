@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2015 The CyanogenMod Project
+# Copyright (C) 2016 The CyanogenMod Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,14 +14,13 @@
 # limitations under the License.
 #
 
-# Board device path
-DEVICE_PATH := device/sony/tulip
-
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
-PRODUCT_AAPT_CONFIG := normal
-PRODUCT_AAPT_PREF_CONFIG := xhdpi
-
-# Device product elements
+# Include package config fragments
 include $(LOCAL_PATH)/product/*.mk
+
+# Include build helpers for QCOM proprietary/kanuti
+$(call inherit-product, vendor/sony/kanuti-tulip/tulip-vendor.mk)
+$(call inherit-product, vendor/qcom/prebuilt/qcom-vendor.mk)
+
