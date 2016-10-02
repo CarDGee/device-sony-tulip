@@ -17,6 +17,11 @@ TARGET_2ND_CPU_VARIANT := cortex-a7
 
 TARGET_USES_64_BIT_BINDER := true
 
+TARGET_NO_RADIOIMAGE := true
+TARGET_NO_BOOTLOADER := true
+TARGET_NO_RECOVERY := false
+TARGET_NO_KERNEL := false
+
 ENABLE_CPUSETS := true
 
 # Init
@@ -33,11 +38,11 @@ NFC_NXP_CHIP_TYPE := PN547C2
 # Props for hotplugging
 TARGET_SYSTEM_PROP += device/sony/tulip/system.prop
 
-# Enable dex-preoptimization to speed up first boot sequence
-ifeq ($(HOST_OS),linux)
-  ifneq ($(TARGET_BUILD_VARIANT),eng)
-    ifeq ($(WITH_DEXPREOPT),)
-      WITH_DEXPREOPT := true
-    endif
-  endif
-endif
+# Include an expanded selection of fonts
+EXTENDED_FONT_FOOTPRINT := true
+
+# Include build helpers for QCOM proprietary
+-include vendor/qcom/proprietary/common/build/proprietary-build.mk
+
+# SELinux
+include device/sony/sepolicy/sepolicy.mk

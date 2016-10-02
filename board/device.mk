@@ -17,3 +17,9 @@ PRODUCT_AAPT_PREF_CONFIG := xhdpi
 PRODUCT_PROPERTY_OVERRIDES := \
     ro.sf.lcd_density=320 \
     ro.usb.pid_suffix=1C4
+
+    
+# Include an expanded selection of fonts
+EXTENDED_FONT_FOOTPRINT := true
+    
+    

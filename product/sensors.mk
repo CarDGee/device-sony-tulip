@@ -43,6 +43,9 @@ PRODUCT_COPY_FILES += \
     device/sony/tulip/configs/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
     device/sony/tulip/rootdir/system/etc/sensor/sensord_cfg_axis.txt:system/etc/sensor/sensord_cfg_axis.txt \
     device/sony/tulip/rootdir/system/etc/sensor/sensors_settings:system/etc/sensors/sensors_settings \
+    device/sony/tulip/rootdir/system/etc/sec_config:system/etc/sec_config \
+ 
+PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.sensor.accelerometer.xml:system/etc/permissions/android.hardware.sensor.accelerometer.xml \
     frameworks/native/data/etc/android.hardware.sensor.compass.xml:system/etc/permissions/android.hardware.sensor.compass.xml \
     frameworks/native/data/etc/android.hardware.sensor.light.xml:system/etc/permissions/android.hardware.sensor.light.xml \
